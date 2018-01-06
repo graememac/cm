@@ -1,0 +1,80 @@
+@import '../../../node_modules/breakpoint-sass/stylesheets/breakpoint';
+$tablet: 768px;
+
+body {
+  font-family: sans-serif;
+
+  .loading-gif {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+
+  .list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    .item {
+      float: left;
+      box-shadow: 0 1px 3px #CCC;
+      border: 1px solid #CCC;
+      border-radius: 5px;
+      padding: 20px;
+      margin: 10px 1%;
+      font-size: 16px;
+      box-sizing: border-box;
+      text-decoration: none;
+      color: #000;
+      height: 200px;
+      width: 98%;
+
+      @include breakpoint($tablet) {
+        width: 23%;
+      }
+      
+      .title {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .detail {
+    padding: 0 10px;
+
+    .title {
+      font-size: 28px;
+      margin: 25px 0;
+    }
+
+    .category {
+      margin-bottom: 20px;
+      font-size: 18px; 
+      overflow: hidden;  
+
+      span {
+        display: block;
+        float: left;
+
+        &:nth-child(1) {
+          width: 50%;
+        }
+
+        &:nth-child(2) {
+          width: 50%;
+        }
+
+        @include breakpoint($tablet) {
+          &:nth-child(1) {
+            width: 30%;
+          }
+  
+          &:nth-child(2) {
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
+}

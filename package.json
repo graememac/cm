@@ -1,0 +1,38 @@
+{
+  "name": "cm",
+  "version": "1.0.0",
+  "description": "Provides overview of the largest container ships in the world",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "webpack": "webpack",
+    "sass": "node-sass --output-style compressed ./app/static/scss/app.scss > ./app/static/css/app.min.css",
+    "build": "npm-run-all test sass webpack"
+  },
+  "author": "Graeme MacFarlane <gsmac_@hotmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.0.4",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "breakpoint-sass": "^2.7.1",
+    "compression": "^1.7.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^4.14.0",
+    "jest": "^22.0.4",
+    "node-sass": "^4.7.2",
+    "npm-run-all": "^4.1.2",
+    "webpack": "^3.10.0"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2",
+    "superagent": "^3.8.2"
+  }
+}
